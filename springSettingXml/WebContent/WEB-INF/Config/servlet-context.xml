@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns=				"http://www.springframework.org/schema/mvc"
+    xmlns:xsi=				"http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:beans=			"http://www.springframework.org/schema/beans"
+    xmlns:context=				"http://www.springframework.org/schema/context" 
+    xsi:schemaLocation=
+    						"http://www.springframework.org/schema/mvc 
+					         http://www.springframework.org/schema/mvc/spring-mvc.xsd
+					         http://www.springframework.org/schema/beans 
+					         http://www.springframework.org/schema/beans/spring-beans.xsd
+					         http://www.springframework.org/schema/context 
+					         http://www.springframework.org/schema/context/spring-context.xsd"
+					         >
+<!-- 
+	scan 한 package 에 작성한 클래스 중에서
+	@Controller 라는 annotation 이 설정된 클래스들을
+	Spring framework 가
+	Controller 로 인식해서 메모리에 loading 하게 설정하기
+ -->					         
+	<annotation-driven />
+	
+	<!--  
+		scan 할 bean(bean 클래스들은 spring framework 가 자동으로 객체를 생성함)
+		들이 작성된 package 들 지정하기  
+	-->
+	<context:component-scan base-package="com.tjoeun.controller"/>
+					   
+</beans:beans>

@@ -1,0 +1,17 @@
+package com.tjoeun.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HomeController {
+
+//		@RequestMapping(value:"/", method=RequestMethod.GET)
+//		@RequestMapping(value:"/", method=RequestMethod.POST)
+//		@GetMapping("/")
+//		@PostMapping("/")
+		@GetMappong("/")
+		public String home() {
+			System.out.println("home");
+			return null;
+		}
+}
